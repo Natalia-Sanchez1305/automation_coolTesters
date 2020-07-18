@@ -11,7 +11,7 @@ public class Login extends CommonsMethods {
 	@FindBy(id="txtUsername")
 	WebElement txt_usuario;
 	@FindBy(name="txtPassword")
-	WebElement txt_contraseña;
+	WebElement txt_contrasena;
 	@FindBy(className="button")
 	WebElement btn_iniciarSesion;
 	@FindBy(xpath="//div[@id='content']/div[2]/span")
@@ -26,7 +26,7 @@ public class Login extends CommonsMethods {
 	public void loginHRM(String userName, String password) throws Exception {
 		reviewElement(label_title);
 		setText(txt_usuario, userName);
-		setText(txt_contraseña, password);
+		setText(txt_contrasena, password);
 		clickObject(btn_iniciarSesion);
 		reviewElement(label_dashboard);
 		takeScreenShot("Login");

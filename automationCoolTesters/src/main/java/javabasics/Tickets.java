@@ -55,9 +55,9 @@ public class Tickets {
 
 	}
 
-	public void precioNiño() {
+	public void precioNino() {
 
-		System.out.println("El precio del boleto Niño es : " + precio3);
+		System.out.println("El precio del boleto Niï¿½o es : " + precio3);
 
 	}
 
@@ -68,7 +68,7 @@ public class Tickets {
 
 		precio.precioAdulto();
 		precio.precioEstudiante();
-		precio.precioNiño();
+		precio.precioNino();
 
 		constructor2.precioAdulto();
 		constructor2.precioEstudiante();
