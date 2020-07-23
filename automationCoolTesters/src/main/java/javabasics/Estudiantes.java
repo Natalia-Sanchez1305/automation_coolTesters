@@ -23,12 +23,12 @@ public class Estudiantes {
 			//	6       4    3     	
 		for (int i = 1; i <= cantidadNotas; i++) {
 
-			System.out.print("La nota numero: " + i + " : ");
+			System.out.print("La nota número: " + i + " : ");
 			nota = obtener.nextFloat();
 
 			while (nota < 0 || nota > 100) {
-				System.out.println("Numero fuera de rango, Escoje una calificacion mayor que 0 y menor que 100: ");
-				System.out.print("vuelve a ingresar la nota numero: " + i + " : \n");
+				System.out.println("Número fuera de rango, Escoje una calificación mayor que 0 y menor que 100: ");
+				System.out.print("Vuelve a ingresar la nota número: " + i + " : \n");
 				nota = obtener.nextFloat();
 			}
 			calificaciones.add(nota);
