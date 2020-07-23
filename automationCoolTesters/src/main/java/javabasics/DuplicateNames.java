@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 public class DuplicateNames {
 			public static void main(String[] args) {
 	
-		//ordena de menor a mayor
+		//ordena de menor a mayor cambios para ver en el github
 		
 		 List<Integer> numeros = new ArrayList<>();
 		    numeros.add(1);
