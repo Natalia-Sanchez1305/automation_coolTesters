@@ -9,7 +9,7 @@ public class Estudiantes {
 
 	public static void main(String[] ARGS) {
 		
-		//variables
+		//Aqui se agregan las variables
 		Scanner obtener = new Scanner(System.in);
 		List<Float> calificaciones = new ArrayList<>();
 		float cantidadNotas, nota, sumaNotas = 0f;
