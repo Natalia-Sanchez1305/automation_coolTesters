@@ -1,7 +1,10 @@
 package javierEjercicioSelenium;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Reporter;
@@ -13,6 +16,9 @@ import org.testng.annotations.Test;
 public class SeleniumEjemplo1 {
 	String url = "http://opensource-demo.orangehrmlive.com";
 	WebDriver driver;
+	
+	//Guardamos los elementos en variables 
+	//WebElement txt_usuario 	= driver.findElement(By.id("txtUsername"));
 	
 	@BeforeTest
 	public void startWebDriver() {
@@ -61,10 +67,36 @@ public class SeleniumEjemplo1 {
 		
 	}
 	
+	@Test (priority = 3)
+	public void logout() {
+		
+		// Localizar el elemento de usuario para usarlo mediante el NAME
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.findElement(By.id("welcome")).click();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.findElement(By.xpath("//li/a[text()='Logout']")).click();
+//		
+//		
+//		
+//		Reporter.log("Ususario Ingresado", true);
+//				
+//		// Para encontrar el password
+//		driver.findElement(By.id("txtPassword")).clear();
+//		driver.findElement(By.id("txtPassword")).sendKeys("admin123");
+//			
+//		//Para presionar el boton Login
+//		driver.findElement(By.id("btnLogin")).submit();
+		
+	}
+	
+	
+	
 	@AfterTest
 	public void closeBrowser() {
-		driver.close();
+		//driver.close();
 	}
+
+}
 
 	
 //	public static void main (String[] arg) {
@@ -99,4 +131,4 @@ public class SeleniumEjemplo1 {
 //			
 //	}
 
-}
+//}
