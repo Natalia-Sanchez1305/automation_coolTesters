@@ -10,15 +10,16 @@ import org.testng.annotations.Test;
 
 public class SeleniumEejemplo1 {
 	String url = "https://opensource-demo.orangehrmlive.com/";
-	WebDriver driver = new ChromeDriver();
+	WebDriver driver;
 
 	@BeforeTest
-	public void startWebDriver() {
+	public void startDriver() {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--start-maximazes");
 		options.addArguments("--incognito");
 		System.setProperty("webdriver.chrome.driver", "chromedriver\\chromedriver.exe");
 		driver = new ChromeDriver(options);
+		driver.get(url);
 
 	}
 
