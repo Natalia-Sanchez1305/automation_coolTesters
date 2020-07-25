@@ -132,3 +132,140 @@ public class SeleniumEjemplo1 {
 //	}
 
 //}
+
+
+
+
+//
+//package javierEjercicioSelenium;
+//
+//import org.openqa.selenium.By;
+//import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.WebElement;
+//import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.chrome.ChromeOptions;
+//import org.testng.Reporter;
+//import org.testng.annotations.AfterTest;
+//import org.testng.annotations.BeforeTest;
+//import org.testng.annotations.Test;
+//
+//
+//public class SeleniumEjemplo1 {
+//	String url = "http://opensource-demo.orangehrmlive.com";
+//	WebDriver driver;
+//	
+//	//Guardamos los elementos en variables 
+//	WebElement txt_usuario 	= driver.findElement(By.id("txtUsername"));
+//	WebElement txt_password = driver.findElement(By.id("txtPassword"));
+//	WebElement btn_login 	= driver.findElement(By.id("btnLogin"));
+//	
+//	@BeforeTest
+//	public void startWebDriver() {
+//		
+//		ChromeOptions options = new ChromeOptions();
+//		
+//		options.addArguments("--start-maximized");
+//		options.addArguments("--incognito");
+//		
+//		System.setProperty("webdriver.chrome.driver", "chromedriver\\chromedriver.exe");
+//		driver= new ChromeDriver(options);
+//		driver.get(url);
+//		
+//	}
+//	
+//	@Test (priority = 1)
+//	public void loginFail() {
+//		
+//		// Localizamos el input de usuario y agregamos el nombre incorrecto de usuario
+//		txt_usuario.sendKeys("Admin3");
+//				
+//		// Localizamos el input del password y agregamos el password incorrecto 
+//		txt_password.sendKeys("admin1234");
+//			
+//		//Presionamos el boton login 
+//		btn_login.submit();
+//		
+//	}
+//	
+//	@Test (priority = 2)
+//	public void login() {
+//		
+//		// Limpiamos todo el contenido del campo usuario
+//		txt_usuario.clear();
+//		// Localizamos el input de usuario y agregamos el nombre de usuario correcto
+//		txt_usuario.sendKeys("Admin");
+//		
+//		// Limpiamos todo el contenido del campo password
+//		txt_password.clear();
+//		// Localizamos el input de usuario y agregamos el password del usuario correcto
+//		txt_password.sendKeys("admin123");
+//		
+//		// Agregamos el log al reporte de los datos agregados
+//		Reporter.log("Usuario Ingresado: \n Password Ingresado:", true);
+//				
+//		//Presionamos el boton login 
+//		btn_login.submit();
+//		
+//	}
+//	
+////	@Test (priority = 3)
+////	public void logout() {
+////		
+////		// Limpiamos todo el contenido del campo usuario
+////		txt_usuario.clear();
+////		// Localizamos el input de usuario y agregamos el nombre de usuario correcto
+////		txt_usuario.sendKeys("Admin");
+////		
+////		// Limpiamos todo el contenido del campo password
+////		txt_password.clear();
+////		// Localizamos el input de usuario y agregamos el password del usuario correcto
+////		txt_password.sendKeys("admin123");
+////		
+////		// Agregamos el log al reporte de los datos agregados
+////		Reporter.log("Usuario Ingresado: \n Password Ingresado:", true);
+////				
+////		//Presionamos el boton login 
+////		btn_login.submit();
+////		
+////	}
+//	
+//	@AfterTest
+//	public void closeBrowser() {
+//		driver.close();
+//	}
+//
+//	
+////	public static void main (String[] arg) {
+////		
+////		/*System.setProperty("webdriver.chrome.driver", "chromedriver\\chromedriver.exe");
+////		// crear objeto chromedriver
+////		WebDriver driver = new ChromeDriver();
+////		
+////		driver.manage().window().maximize();
+////		
+////		driver.get("http://google.com");
+////		// para movernos a otra URL
+////		driver.navigate().to("http://opensource-demo.orangehrmlive.com");
+////		// Localizar el elemento de usuario para usarlo mediante el ID
+////		driver.findElement(By.id("txtUsername")).sendKeys("Admin3");
+////		
+////		//Localizar el elemento de usuario para usarlo mediante XPATH
+////		driver.findElement(By.xpath("//input[@id=\"txtUsername\"]")).clear();
+////		driver.findElement(By.xpath("//input[@id=\"txtUsername\"]")).sendKeys("Admin2");
+////		
+////		// Localizar el elemento de usuario para usarlo mediante el NAME
+////		driver.findElement(By.name("txtUsername")).clear();
+////		driver.findElement(By.name("txtUsername")).sendKeys("Admin");
+////		
+////		// Para encontrar el password
+////		driver.findElement(By.id("txtPassword")).sendKeys("admin123");
+////		
+////		//Para presionar el boton Login
+////		driver.findElement(By.id("btnLogin")).click();
+////		
+////		*/
+////			
+////	}
+//
+//}
+
