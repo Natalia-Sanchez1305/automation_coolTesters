@@ -8,7 +8,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class SeleniumEjemplo1 {
+public class SeleniumEjemploEstuardo {
 	String url = "https://opensource-demo.orangehrmlive.com/";
 	WebDriver driver;
 	
