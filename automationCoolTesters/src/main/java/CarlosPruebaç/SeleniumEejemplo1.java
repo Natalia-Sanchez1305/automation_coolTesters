@@ -23,7 +23,6 @@ public class SeleniumEejemplo1 {
 
 	}
 
-		driver.findElement(By.id("txtPassword")).sendKeys("admin1");
 	@Test(priority = 1)
 	public void login() {
 		driver.findElement(By.id("txtUsername")).sendKeys("Admin");
