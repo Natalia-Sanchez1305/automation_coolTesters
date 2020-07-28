@@ -23,28 +23,49 @@ public class SeleniumEejemplo1 {
 
 	}
 
-	@Test(priority = 1)
-	public void loginFail() {
-		driver.findElement(By.id("txtUsername")).sendKeys("Admin");
 		driver.findElement(By.id("txtPassword")).sendKeys("admin1");
-		driver.findElement(By.id("btnLogin")).submit();
-	}
-
 	@Test(priority = 1)
 	public void login() {
-		driver.findElement(By.id("txtUsername")).clear();
-		driver.findElement(By.id("txtPassword")).clear();
 		driver.findElement(By.id("txtUsername")).sendKeys("Admin");
 		driver.findElement(By.id("txtPassword")).sendKeys("admin123");
 		driver.findElement(By.id("btnLogin")).submit();
+		
+	}
+	
+	@Test(priority = 2)
+	public void logout () {
+		driver.findElement(By.id("welcome")).click();
+		driver.navigate().to("https://opensource-demo.orangehrmlive.com/index.php/auth/logout");
 	}
 
 	@AfterTest
-
-	public void closebrowser() {
+	 public void closebrowser () {
 		driver.close();
 	}
 }
+
+//	@Test(priority = 1)
+//	public void loginFail() {
+//		driver.findElement(By.id("txtUsername")).sendKeys("Admin");
+//		driver.findElement(By.id("txtPassword")).sendKeys("admin1");
+//		driver.findElement(By.id("btnLogin")).submit();
+//	}
+//
+//	@Test(priority = 2)
+//	public void login() {
+//		driver.findElement(By.id("txtUsername")).clear();
+//		driver.findElement(By.id("txtPassword")).clear();
+//		driver.findElement(By.id("txtUsername")).sendKeys("Admin");
+//		driver.findElement(By.id("txtPassword")).sendKeys("admin123");
+//		driver.findElement(By.id("btnLogin")).submit();
+//	}
+//
+//	@AfterTest
+//
+//	public void closebrowser() {
+//		driver.close();
+//	}
+//}
 
 // 1. Entrar al sistema de HR (https://opensource-demo.orangehrmlive.com/)
 // 2. Acceder correctamente al sistema (usuario:Admin password:admin123 )
