@@ -15,9 +15,10 @@ public class login {
 	String user="Admin" ;
 	String password="admin123";
 	WebDriver driver;
+	
 	@BeforeTest
 	
-	public void startWebeDriver() {
+	public void startDriver() {
 		
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--start-maximized");
@@ -37,21 +38,20 @@ public class login {
 	}
 	
 	@Test(priority=2)
-	public void Login(String user, String password) {
+	public void Login() {
 		
 		driver.findElement(By.id("txtUsername")).clear();
 		driver.findElement(By.id("txtPassword")).clear();
-		driver.findElement(By.id("txtUsername")).sendKeys("user");
-		Reporter.log("usuario Ingresado" + user, true);
-		driver.findElement(By.id("txtPassword")).sendKeys(password);
-		Reporter.log("password Ingresado" + password, true);
+		driver.findElement(By.id("txtUsername")).sendKeys("Admin");
+		Reporter.log("usuario Ingresado", true);
+		driver.findElement(By.id("txtPassword")).sendKeys("admin123");
 		driver.findElement(By.id("btnLogin")).submit();
-		Reporter.log("clic en login" , true);
+		
 	}
 	
 	@AfterTest
 	public void closeBrowser() {
-		driver.close();
+//		driver.close();
 	}
 	
 	
