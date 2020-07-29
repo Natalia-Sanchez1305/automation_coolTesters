@@ -1,10 +1,14 @@
 package davidFlores;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -47,8 +51,10 @@ public class seleniumEjemplo {
 	}
 	
 	@Test(priority=3)
-	public void logout() {
-		
+	public void logout() throws InterruptedException{
+		driver.findElement(By.id("welcome")).click();
+		Thread.sleep(500);
+		driver.findElement(By.linkText("Logout")).click();
 	}
 	
 	@AfterTest
