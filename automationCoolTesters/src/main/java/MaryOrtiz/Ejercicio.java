@@ -1,5 +1,8 @@
 package MaryOrtiz;
 
+
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -47,9 +50,20 @@ public class Ejercicio {
 		Reporter.log("Clic en login", true);
 	}
 	
+	@Test(priority=3)
+	public void logout() {
+		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+		driver.findElement(By.id("welcome")).click();
+		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+		driver.findElement(By.xpath("//a[text()=\"Logout\"]")).click();
+		Reporter.log("Clic en logout", true);
+	}
+	
+	
 	@AfterTest
 	public void closeBrowser() {
-		driver.close();
+		//driver.close();
+		
 	}
 	
 //
