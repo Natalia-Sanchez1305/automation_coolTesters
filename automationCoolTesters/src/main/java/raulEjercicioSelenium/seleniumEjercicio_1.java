@@ -48,7 +48,9 @@ public class seleniumEjercicio_1 {
 	@Test(priority=3)
 	public void logout() {
 		driver.findElement(By.id("welcome")).click();
+		Reporter.log("Click welcome",true);
 		driver.findElement(By.xpath("//*[@id=\"welcome-menu\"]/ul/li[2]/a")).click();
+		Reporter.log("Click Log Out",true);
 	}
 	@AfterTest
 	public void closeBrowser() {
