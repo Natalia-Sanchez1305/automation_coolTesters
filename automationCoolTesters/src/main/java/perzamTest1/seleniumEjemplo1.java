@@ -2,8 +2,10 @@ package perzamTest1;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.FindBy;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -13,6 +15,20 @@ public class seleniumEjemplo1 {
 	String url = "https://opensource-demo.orangehrmlive.com/";
 	WebDriver driver;
 	String user="Admin", password="admin123";
+	@FindBy(id="txtUsername")
+	WebElement txt_usuario;
+	@FindBy(name="txtPassword")
+	WebElement txt_contraseña;
+	@FindBy(name="btnLogin")
+	WebElement btn_login;
+	@FindBy(id="welcome")
+	WebElement btn_welcome;
+	@FindBy(xpath="//a[text()='Logout']")
+	WebElement link_logout;
+	@FindBy(xpath="//div[@id='mainMenu']")
+	WebElement tbl_menu;
+	
+	
 	
 	@BeforeTest
 	public void starDriver() {
