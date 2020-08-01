@@ -41,7 +41,10 @@ public class seleniumEjemplo1 {
 		driver.findElement(By.id("txtPassword")).clear();
 		driver.findElement(By.id("txtPassword")).sendKeys(password);
 		Reporter.log("Password Ingresado", true);
-		driver.findElement(By.id("btnLogin")).submit();
+		driver.findElement(By.xpath("//input[@value=\"LOGIN\"]")).click();
+		//driver.findElement(By.xpath("//a[@id=\"menu_admin_viewAdminModule\"]")).click();
+		driver.findElement(By.xpath("//a[@id=\"welcome\"]")).click();
+		driver.findElement(By.xpath("//div[@id=\"welcome-menu\"]/ul/li[2]/a")).click();
 	}
 	
 	@AfterTest
