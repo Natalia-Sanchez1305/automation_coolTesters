@@ -1,7 +1,7 @@
 package sergioEjerciciosSelenium;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeUnit;  
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
